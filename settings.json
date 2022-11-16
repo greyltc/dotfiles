@@ -1,11 +1,15 @@
 {
-    "python.testing.unittestEnabled": true,
-    "python.formatting.provider": "black",
-    "editor.formatOnSave": true,
-    "terminal.integrated.env.linux": {
-        "PYTHONPATH": "${workspaceFolder}${pathSeparator}src",
-    },
-    "terminal.integrated.env.windows": {
-        "PYTHONPATH": "${workspaceFolder}${pathSeparator}src",
-    },
+	"python.testing.unittestEnabled": true,
+	"python.testing.cwd":"${workspaceFolder}",
+	"python.formatting.provider": "black",
+	"editor.formatOnSave": true,
+	"terminal.integrated.env.linux": {
+    		"PYTHONPATH": "${workspaceFolder}/k/src:${env:PYTHONPATH}"
+  	},
+	"terminal.integrated.env.osx": {
+		"PYTHONPATH": "${workspaceFolder}/src:${env:PYTHONPATH}"
+	},
+	"terminal.integrated.env.windows": {
+		"PYTHONPATH": "${workspaceFolder}/src;${env:PYTHONPATH}"
+	}
 }
